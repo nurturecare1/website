@@ -8,20 +8,22 @@ body {
 </style>
 
 <body>
+  <form id="form">
   <input id="guess">
   <button id="send">submit</button>
   <span id="result"></span>
+  </form>
 <script>
   let hiddenNumber = Math.round(Math.random() * 100);
-  window.send.onclick = () => {
+  window.form.onsubmit = () => {
     let guess = +window.guess.value;
     
     window.result.innerText = "Your guess was " + guess + ". It was too ";
     if (guess < hiddenNumber) {
-      window.result.innerText += "too low."
+      window.result.innerText += " low."
     }
     else {
-      window.result.innerText += "too high."
+      window.result.innerText += " high."
     }
 
     
