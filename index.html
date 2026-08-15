@@ -8,11 +8,11 @@ body {
 </style>
 
 <body>
-  <input id="firstname">
+  <input id="guess">
   <button id="send">submit</button>
-  <span id="greeting"></span>
+  <span id="result"></span>
 <script>
-  window.send.onclick = () => window.greeting.innerText = "Hello " + window.firstname.value;
+  window.send.onclick = () => window.result.innerText = "Your guess was " + window.guess.value;
   
 /* this code is for reference 
   let name = prompt("what is your name");
