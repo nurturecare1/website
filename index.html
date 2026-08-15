@@ -15,7 +15,8 @@ body {
   </form>
 <script>
   let hiddenNumber = Math.round(Math.random() * 100);
-  window.form.onsubmit = () => {
+  window.form.onsubmit = (e) => {
+    e.preventDefault();
     let guess = +window.guess.value;
     
     window.result.innerText = "Your guess was " + guess + ". It was too ";
