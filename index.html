@@ -12,6 +12,7 @@ body {
   <button id="send">submit</button>
   <span id="result"></span>
 <script>
+  window.result.innerText = Math.random();
   window.send.onclick = () => window.result.innerText = "Your guess was " + window.guess.value;
   
 /* this code is for reference 
