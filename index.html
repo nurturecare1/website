@@ -19,14 +19,17 @@ body {
     e.preventDefault();
     let guess = +window.guess.value;
     
-    window.result.innerText = "Your guess was " + guess + ". It was too ";
+    window.result.innerText = "Your guess was " + guess + ". It was ";
     if (guess < hiddenNumber) {
       window.result.innerText += " low."
     }
-    else {
+    else if (guess > hiddenNumber) {
       window.result.innerText += " high."
     }
-
+    else {
+      window.result.innerText = " right."
+      
+    }
     
   }
   
